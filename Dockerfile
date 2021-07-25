@@ -16,7 +16,7 @@ RUN printf "\n" | pecl install redis \
     && printf "\n" | pecl install dbase \
     && printf "\n" | pecl install swoole \
     && docker-php-ext-enable redis memcached memcache mongodb xdebug rar dbase swoole \
-    && docker-php-ext-install bcmath bz2 calendar exif opcache mysqli pdo_mysql pdo_pgsql intl zip soap gd xsl pcntl sockets imap tidy \
+    && docker-php-ext-install bcmath bz2 calendar exif opcache mysqli pdo_mysql pgsql pdo_pgsql intl zip soap gd xsl pcntl sockets imap tidy \
     && a2enmod ssl \
     && chmod 777 /var/log
 RUN mkdir -p /usr/src/php/ext/amqp \
